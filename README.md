@@ -1,7 +1,7 @@
 # Game-Dex
 **Loja de Jogos Virtuais**
 
-Game-Dex é um **projeto escolar** criado usando as técnologias de front-end mais simples:
+Game-Dex é um **projeto escolar** criado usando as técnologias de front-end mais simples, além de importar algumas fontes e bibliotécas:
 | HTML | CSS | JS | NODE | REACT |
 |------|-----|----|------|-------|
 |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_multiplication_x:|:heavy_multiplication_x:|       |
