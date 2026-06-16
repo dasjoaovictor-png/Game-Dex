@@ -21,6 +21,9 @@ Com a intenção de oferecer uma loja de jogos virtuais simples e fácil de usar
 1. Clone o repositório  
 ```bash git clone https://github.com/seu-usuario/Game-Dex.git```
 
+2. Baixe o projeto e abra:
+```Game Dex/Main/login/login.html```
+
 ## 📁 Estrutura do Projeto
 A organização dos arquivos do projeto foi estruturada da seguinte forma:
 
