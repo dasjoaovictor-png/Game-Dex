@@ -16,6 +16,7 @@ Com a intenção de oferecer uma loja de jogos virtuais simples e fácil de usar
 - **Confirmar** a sua compra
 
 ## 📸 Demonstração do Layout
+
 <img width="100%" alt="Captura de tela do Game-Dex" src="https://github.com/user-attachments/assets/9ec95c29-ec42-46fa-81dc-a33f80385094" />
 
 ## 📁 Estrutura do Projeto
@@ -23,7 +24,7 @@ Com a intenção de oferecer uma loja de jogos virtuais simples e fácil de usar
 A organização dos arquivos do projeto foi estruturada da seguinte forma:
 
 ```
-Game-Dex
+Game Dex
 │
 ├── img/
 │
