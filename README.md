@@ -14,6 +14,14 @@ Com a intenção de oferecer uma loja de jogos virtuais simples e fácil de usar
 - **Adicionar o jogo ao carrinho** com soma de preços
 - **Confirmar** a sua compra
 
+## 🛡️ Conta Administradora
+Para fins de testes a conta é:
+
+- name: "joao"
+- password: "madeira"
+
+Esta conta permite que o usuário adicione jogos ao catálogo.
+
 ## 📸 Demonstração do Layout
 <img width="100%" alt="Captura de tela do Game-Dex" src="https://github.com/user-attachments/assets/9ec95c29-ec42-46fa-81dc-a33f80385094" />
 
