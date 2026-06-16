@@ -1,4 +1,7 @@
 # Game-Dex
-*Loja de Jogos Virtuais*
+**Loja de Jogos Virtuais**
 
-oi
+Game-Dex é um site criado usando apenas:
+-  HTML
+-  CSS
+-  JS
