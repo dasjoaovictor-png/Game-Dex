@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Dex - Estoque</title>
+
+    <link rel="shortcut icon" href="/img/dpad.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="stock.css">
+    <script type="module" src="stock.js" defer></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+    <script src="https://cdn.jsdelivr.net/npm/kursor"></script>
+</head>
+<body>
+    <main class="stock" id="stock">
+
+        <div class="cyberGrid"></div>
+
+        <div class="particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <section class="sendGame">
+            <h4>Cadastre Um Jogo</h4>
+
+            <div class="gameData">
+
+                <div class="gameName">
+                    <input type="text" placeholder="Enter Name Of The Game..." class="sendName" id="sendName" required/>
+                </div>
+
+                <div class="gameDescription">
+                    <input type="text" placeholder="Enter Description Of The Game..." class="sendDescription" id="sendDescription" required/>
+                </div>
+
+                <div class="gamePrice">
+                    <input type="number" placeholder="Enter Price Of The Game..." class="sendPrice" id="sendPrice" required>
+                </div>
+
+                <div class="gameImg">
+                    <input type="file" class="sendImg" id="sendImg" required/>
+                </div>
+
+                <a href="/Main/store/store.html" class="addGame" id="addGame">Adicionar</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

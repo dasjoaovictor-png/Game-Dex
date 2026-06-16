@@ -1,0 +1,172 @@
+@import "/Styles/background.css";
+@import "/Styles/cursor.css";
+@import "/Styles/scroll.css";
+@import "/Styles/toast.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron";
+  cursor: none;
+}
+
+body {
+  background: #0f0f1e;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 2rem;
+}
+
+.stock {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(135deg, #0f0f1e 0%, #1f1f3a 100%);
+  overflow: hidden;
+}
+
+.sendGame {
+  border: 1px solid #00f7ff;
+  border-radius: 3rem;
+  width: 40%;
+  height: 75%;
+  backdrop-filter: blur(5px);
+  box-shadow:
+    0 0 5px #00f7ff,
+    0 0 10px rgba(0, 247, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sendGame h4 {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-align: center;
+  color: #ff1a85;
+}
+
+.gameData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+  height: 80%;
+  width: 95%;
+}
+
+.gameName,
+.gameDescription,
+.gamePrice,
+.gameImg {
+  width: 100%;
+  text-align: center;
+}
+
+.sendName,
+.sendDescription,
+.sendPrice {
+  width: 60%;
+  height: 60px;
+  border: 1px solid rgba(255, 26, 133, 0.6);
+  border-radius: 12px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #00f7ff;
+  overflow: hidden;
+  line-height: 1.4;
+  resize: none;
+  outline: none;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.sendPrice::-webkit-outer-spin-button,
+.sendPrice::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.sendImg {
+  border: 1px solid #ff1a85;
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: #ff1a85;
+  transition: 0.3s;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.sendName::placeholder,
+.sendDescription::placeholder,
+.sendPrice::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 3px;
+}
+
+.sendName:hover,
+.sendDescription:hover,
+.sendPrice:hover {
+  border-color: #00f7ff;
+  box-shadow:
+    0 0 5px #00f7ff,
+    0 0 10px rgba(0, 247, 255, 0.4);
+}
+
+.sendImg:hover {
+  background: #ff1a85;
+  color: #fff;
+  box-shadow: 0 0 10px #ff1a85;
+}
+
+.sendName:focus,
+.sendDescription:focus,
+.sendPrice.focus {
+  border-color: #00f7ff;
+  box-shadow: 0 0 10px rgba(0, 247, 255, 0.6);
+}
+
+.addGame {
+  position: relative;
+  padding: 5px 0;
+  text-decoration: none;
+  color: #ff1a85;
+  margin-top: 15px;
+}
+
+.addGame::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0;
+  height: 2px;
+  background-color: #00f7ff;
+  transition: width 0.3s ease;
+}
+
+.addGame:hover::after {
+  width: 100%;
+}
+
+.login::before,
+.login::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.25;
+  animation: floatGlow 10s ease-in-out infinite;
+  z-index: 0;
+}
