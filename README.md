@@ -18,7 +18,7 @@ Com a intenção de oferecer uma loja de jogos virtuais simples e fácil de usar
 <img width="100%" alt="Captura de tela do Game-Dex" src="https://github.com/user-attachments/assets/9ec95c29-ec42-46fa-81dc-a33f80385094" />
 
 ## 🚀 Como Executar
-1. Clone o repositório
+1. Clone o repositório  
 ```bash git clone https://github.com/seu-usuario/Game-Dex.git```
 
 ## 📁 Estrutura do Projeto
