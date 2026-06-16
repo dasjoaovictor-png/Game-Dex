@@ -17,8 +17,8 @@ Com a intenção de oferecer uma loja de jogos virtuais simples e fácil de usar
 ## 🛡️ Conta Administradora
 Para fins de testes a conta é:
 
-- name: "joao"
-- password: "madeira"
+- **name:** "joao"
+- **password:** "madeira"
 
 Esta conta permite que o usuário adicione jogos ao catálogo.
 
