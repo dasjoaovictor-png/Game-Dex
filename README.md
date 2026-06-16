@@ -22,7 +22,8 @@ Com a intenção de oferecer uma loja de jogos virtuais simples e fácil de usar
 
 A organização dos arquivos do projeto foi estruturada da seguinte forma:
 
-```Game-Dex
+```
+Game-Dex
 │
 ├── img/
 │
