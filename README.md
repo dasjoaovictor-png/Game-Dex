@@ -1,5 +1,4 @@
 # 🎮 Game-Dex
-
 Game-Dex é um **projeto escolar** criado usando as tecnologias de front-end mais simples, além de importar algumas fontes e bibliotecas:
 
 | HTML | CSS | JS | NODE | REACT |
