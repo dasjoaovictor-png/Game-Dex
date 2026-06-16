@@ -17,7 +17,7 @@ Designed to provide a simple and user-friendly virtual game store, the project i
 ## 🛡️ Administrator Account
 For testing purposes, the administrator account is:
 
-Username: joão
+Username: joão  
 Password: madeira
 
 This account allows the user to add games to the catalog.
