@@ -27,7 +27,7 @@ This account allows the user to add games to the catalog.
 
 ## 🚀 How to Run
 1. Clone the repository:  
-git clone https://github.com/your-username/Game-Dex.git
+git clone https://github.com/Madeira/Game-Dex.git
 
 2. Download the project and open:  
 Game-Dex/Main/login/login.html
