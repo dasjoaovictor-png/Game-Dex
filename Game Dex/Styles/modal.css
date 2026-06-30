@@ -27,9 +27,15 @@
   box-shadow:
     0 0 15px rgba(0, 247, 255, 0.25),
     0 0 50px rgba(0, 247, 255, 0.08);
-  color: white;
   animation: modalShow 0.35s ease;
   overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.modal:hover {
+  box-shadow:
+    0 0 15px rgba(0, 247, 255, 0.473),
+    0 0 40px rgba(0, 247, 255, 0.514);
 }
 
 .modal::before,
@@ -130,7 +136,6 @@
   box-shadow:
     0 0 10px #00f7ff,
     0 0 20px rgba(0, 247, 255, 0.4);
-
   transform: translateY(-2px);
 }
 

@@ -1,17 +1,6 @@
 @import "/Styles/background.css";
 @import "/Styles/cursor.css";
-@import "/Styles/scroll.css";
 @import "/Styles/toast.css";
-
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Orbitron';
-  cursor: none;
-}
 
 body {
   background: #0f0f1e;

@@ -1,11 +1,7 @@
 import { createAccount } from "../../JavaScript/functions.js";
 import { cursorMove } from "../../JavaScript/functions.js";
 
-// ===============================
-// BOTÃO
-// ===============================
+cursorMove();
 
 const createAccountBtn = document.getElementById("createAccount");
 createAccountBtn.addEventListener("click", (event) => createAccount(event));
-
-cursorMove();

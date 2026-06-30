@@ -1,14 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron";
+  cursor: none;
+  user-select: none;
+}
+
 .cyberGrid {
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background-image: linear-gradient(rgba(255, 0, 64, 0.397) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 0, 64, 0.397) 1px, transparent 1px);
-    background-size: 60px 60px;
-    transform: perspective(1000px) rotateX(75deg);
-    animation: gridMove 12s linear infinite;
-    bottom: -60%;
-    left: -50%;
-    z-index: 0;
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image:
+    linear-gradient(rgba(255, 0, 64, 0.397) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 64, 0.397) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform: perspective(1000px) rotateX(75deg);
+  animation: gridMove 10s linear infinite;
+  bottom: -55%;
+  left: -50%;
+  z-index: 0;
 }
 
 .particles {
@@ -103,13 +116,11 @@
 
 @keyframes gridMove {
   0% {
-    transform:
-      perspective(1000px) rotateX(75deg) translateY(0);
+    transform: perspective(1000px) rotateX(75deg) translateY(0);
   }
 
   100% {
-    transform:
-      perspective(1000px) rotateX(75deg) translateY(60px);
+    transform: perspective(1000px) rotateX(75deg) translateY(60px);
   }
 }
 

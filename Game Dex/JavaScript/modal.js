@@ -31,13 +31,13 @@ export function createModal() {
   modal.append(header, content, footer);
 
   overlay.append(modal);
-  document.body.appendChild(overlay);
+  document.body.append(overlay);
 
   function closeModal() {
     overlay.remove();
   }
 
-  cancelButton.addEventListener("click", closeModal);
+  cancelButton.addEventListener("click", () => closeModal());
 
   overlay.addEventListener("click", (event) => {
     if (event.target === overlay) closeModal();

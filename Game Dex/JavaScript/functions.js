@@ -7,7 +7,7 @@ import { showToast } from "./toast.js";
 export function cursorMove() {
   new kursor({
     type: 4,
-    color: "#00f7ff",
+    color: "#ff1a85",
   });
 }
 
@@ -31,7 +31,7 @@ export function soundTrack() {
         music.play();
       }
     });
-  });
+  }, {once: true});
 }
 
 // ===============================
@@ -40,28 +40,26 @@ export function soundTrack() {
 
 export function verificationAccount() {
   const userData = JSON.parse(localStorage.getItem("userData"));
-  if (!userData || !userData.userName || !userData.userEmail || !userData.userPassword)
+
+  if (!userData || !userData.userName || !userData.userEmail || !userData.userPassword) {
     location.href = "/Main/login/login.html";
+    return;
+  }
 }
 
 // ===============================
-// SAUDAÇÃO AO ADM
+// SAUDAÇÃO
 // ===============================
 
-export function helloADM() {
+export function hello() {
   const userData = JSON.parse(localStorage.getItem("userData"));
-  if (userData.userName == "joao" && userData.userPassword == "madeira")
+
+  if (userData.userName === "joao" && userData.userPassword === "madeira") {
     showToast({ message: "Olá, Administrador", type: "success" });
-}
-
-// ===============================
-// SAUDAÇÃO AO USER
-// ===============================
-
-export function helloUser() {
-  const userData = JSON.parse(localStorage.getItem("userData"));
-  if (userData.userName !== "joao" && userData.userPassword !== "madeira")
+    return;
+  } else {
     showToast({ message: `Olá, ${userData.userName}!`, type: "success" });
+  }
 }
 
 // ===============================
@@ -75,8 +73,10 @@ export function createAccount(event) {
   const email = document.getElementById("email");
   const password = document.getElementById("password");
 
-  if (!name.value || !email.value || !password.value)
-    showToast({ message: "Preencha Os Campos", type: "error" });
+  if (!name.value || !email.value || !password.value) {
+    showToast({ message: "Preencha os Campos", type: "error" });
+    return;
+  }
 
   const userData = {
     userName: name.value,
@@ -89,7 +89,7 @@ export function createAccount(event) {
 }
 
 // ===============================
-// CONVERSOR DE IMAGEM PARA - Base64
+// IMAGEM - Base64
 // ===============================
 
 export function toBase64(file) {
@@ -97,14 +97,17 @@ export function toBase64(file) {
     const reader = new FileReader();
 
     reader.onload = () => resolve(reader.result);
-    reader.onerror = reject;
+    reader.onerror = (error) => {
+      showToast({ message: "Imagem Inválida", type: "error" });
+      reject(error);
+    };
 
     reader.readAsDataURL(file);
   });
 }
 
 // ===============================
-// CADASTRAR NOVO JOGO
+// BOTÃO - CADASTRAR JOGO
 // ===============================
 
 export async function createNewGame(event) {
@@ -115,11 +118,22 @@ export async function createNewGame(event) {
   const gamePrice = document.getElementById("sendPrice").value;
   const gameImg = document.getElementById("sendImg").files[0];
 
-  if (!gameName || !gameDescription || !gamePrice || !gameImg)
-    showToast({ message: "Preencha os campos", type: "error" });
+  if (!gameName || !gameDescription || !gamePrice || !gameImg) {
+    showToast({ message: "Preencha os Campos", type: "error" });
+    return;
+  }
 
-  const img64 = await toBase64(gameImg);
-
+  let img64;
+  
+  try {
+    img64 = await toBase64(gameImg);
+  } catch (error){
+    console.error(error);
+    
+    showToast ({ message: "Erro na Imagem", type: "error" });
+    return;
+  }
+  
   localStorage.setItem("newGameName", gameName);
   localStorage.setItem("newGameDescription", gameDescription);
   localStorage.setItem("newGamePrice", gamePrice);
@@ -168,10 +182,12 @@ export function callBack() {
 export function toStock() {
   const userData = JSON.parse(localStorage.getItem("userData"));
 
-  if (userData.userName == "joao" && userData.userPassword == "madeira") 
+  if (userData.userName === "joao" && userData.userPassword === "madeira") {
     location.href = "/Main/stock/stock.html";
-  else 
-    showToast({ message: "Sem Permissão", type: "error" });
+    return;
+  } else {
+    showToast({ message: "Trouxa haha", type: "warning" });
+  }
 }
 
 // ===============================
@@ -189,10 +205,11 @@ export function searchGame(event) {
   games.forEach((game) => {
     const text = formatString(game.textContent);
 
-    if (value === "" || text.includes(value)) 
+    if (value === "" || text.includes(value)) {
       game.classList.remove("hidden");
-    else 
+    } else {
       game.classList.add("hidden");
+    }
   });
 }
 
@@ -209,7 +226,7 @@ export function addFavorite(check) {
     if (card.classList.contains("cardSelected")) {
       if (!favoriteList.includes(card)) {
         favoriteList.push(card);
-        check.classList.add("checked");
+        check.classList.toggle("checked");
 
         showToast({ message: "Favoritado", type: "success" });
       }
@@ -223,7 +240,7 @@ export function addFavorite(check) {
         const gamesContainer = document.getElementById("games");
         gamesContainer.append(card);
 
-        showToast({ message: "Removido dos Favoritos", type: "success" });
+        showToast({ message: "Removido dos Favoritos", type: "warning" });
       }
     }
   });
@@ -263,12 +280,12 @@ export function addCard(card) {
 let total = 0;
 export function showPrice(price) {
   const priceValue = parseFloat(
-    price.textContent.replace("R$", "").replace(",", ".").trim(),
+    price.textContent.replace("R$", "").replace(",", ".").trim()
   );
   total += priceValue;
 
   const car = document.getElementById("car");
-  car.textContent = `R$ ${total.toFixed(2)}`;
+  car.textContent = `R$ ${ total.toFixed(2) }`;
 
   showToast({ message: "Adicionado Ao Carrinho", type: "success" });
 }
@@ -303,16 +320,16 @@ export function addNewGame() {
     const newGameCard = document.createElement("div");
     newGameCard.classList.add("gameCard");
 
-    newGameCard.innerHTML += `
+    newGameCard.innerHTML = `
       <figure class="img">
-        <img src=${newGameImg} alt=${newGameName}>
+        <img src=${ newGameImg } alt=${ newGameName }>
       </figure>
 
       <div class="gameText">
         <p class="tag">Pelo Usuário</p>
-        <p class="name">${newGameName}</p>
-        <p class="description">${newGameDescription}</p>
-        <p class="price">R$ ${newGamePrice}
+        <p class="name">${ newGameName }</p>
+        <p class="description">${ newGameDescription }</p>
+        <p class="price">R$ ${ parseFloat(newGamePrice).toFixed(2) }
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="check" viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
             <path

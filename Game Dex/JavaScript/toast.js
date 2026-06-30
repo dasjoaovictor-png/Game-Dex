@@ -15,6 +15,7 @@ export function showToast(options = {}) {
     setTimeout(() => {
       if (document.body.contains(toast)) toast.remove();
     }, 300);
+    
   }, duration);
   
   return toast;
